@@ -1,0 +1,31 @@
+{
+  "header": {
+    "solutions": "Solutions",
+    "tariffs": "Tariffs",
+    "blog": "Blog",
+    "about": "About Us",
+    "contacts": "Contacts"
+  },
+  "blog": {
+    "subscribe": {
+      "title": "B L O G",
+      "text": "Our best materials in your mail",
+      "buttons": {
+        "sub": "Subscribe",
+        "ask": "Ask a question"
+      }
+    },
+    "articles": {
+      "btn": "Load more"
+    }
+  },
+  "footer": {
+    "buttons": {
+      "demo": "Demo Access",
+      "enter": "Login to the system"
+    }
+  },
+  "pages": {
+    "gif": "Page under construction"
+  }
+}

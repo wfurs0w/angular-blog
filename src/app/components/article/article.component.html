@@ -1,0 +1,42 @@
+<div class="container pt-4">
+  <div class="row" *ngIf="articles">
+    <div class="col-md-4 mb-3 text-center" *ngFor="let article of articles | slice:0:showCount">
+      <img
+        class="img-thumbnail article-img"
+        src="{{ article.MainImage }}"
+        alt="{{ article.Title }}"
+        [routerLink]="['/slug', article.Slug]"
+        (click)="articleService.articleSlug=article.Slug"
+      />
+      <p
+        [routerLink]="['/slug', article.Slug]"
+        class="article-title"
+        (click)="articleService.articleSlug=article.Slug"
+      >
+        {{ article.Title }}
+      </p>
+    </div>
+  </div>
+  <div class="row" *ngIf="articles?.length && showCount < articles.length && !isMobileView">
+    <div class="col-md-12 text-center p-4 my-4">
+      <button class="btn btn-warning" (click)="showCount = showCount + 9">
+        {{ "blog.articles.btn" | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="row" *ngIf="articles?.length && showCount < articles.length && isMobileView">
+    <div class="col-md-12 text-center p-4 my-4 d-flex justify-content-center align-items-center">
+      <ng-container *ngIf="isLoading">
+        <div class="spinner-border text-primary" role="status"></div>
+      </ng-container>
+      <ng-template #loadMoreButton>
+        <button
+          class="btn btn-secondary mx-2"
+          (click)="loadMoreArticles()"
+          [disabled]="isLoading"
+        >
+          {{ isLoading ? "" : "Load more" }}</button>
+      </ng-template>
+    </div>
+  </div>
+</div>

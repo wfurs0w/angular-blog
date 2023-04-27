@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.navbar {
+  background-color: #004896;
+}
+
+.navbar-brand {
+  color: #bb8f00;
+  font-weight: 700;
+}
+
+.burger {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 2px solid #bb8f00;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  transition: all .3s;
+  font-weight: 600;
+  transition: color 0.3s ease ;
+
+  &:hover {
+    color: #bb8f00;
+  }
+}
+
+.dropdown {
+  color: #fff;
+  border: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #bb8f00;
+  }
+}
+

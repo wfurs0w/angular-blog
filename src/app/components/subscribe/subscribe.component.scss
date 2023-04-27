@@ -1,0 +1,54 @@
+.subscribe {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #004896, #0162ca);
+
+  &__first {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+  }
+
+  &__last {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  &__img {
+    width: 400px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe {
+    justify-content: center;
+
+    &__first {
+      align-items: center;
+      justify-content: baseline;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
+
+    &__last {
+      padding: 10px;
+    }
+  }
+}
