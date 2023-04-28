@@ -19,6 +19,16 @@
       "btn": "Показать ещё"
     }
   },
+  "article-details": {
+    "form": {
+      "title": "Остались вопросы?",
+      "name" : "Ваше имя*",
+      "email": "Email*",
+      "phone": "Телефон*",
+      "question": "Вопрос",
+      "btn": "Отправить"
+    }
+  },
   "footer": {
     "buttons": {
       "demo": "Демо-доступ",

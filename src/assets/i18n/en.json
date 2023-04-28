@@ -19,6 +19,16 @@
       "btn": "Load more"
     }
   },
+  "article-details": {
+    "form": {
+      "title": "Still have questions?",
+      "name" : "Your name*",
+      "email": "Email*",
+      "phone": "Phone*",
+      "question": "Question",
+      "btn": "Send"
+    }
+  },
   "footer": {
     "buttons": {
       "demo": "Demo Access",

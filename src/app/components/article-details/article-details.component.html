@@ -1,1 +1,29 @@
-<div class="container py-4" [innerHTML]="articleContent"></div>
+<div class="container d-flex flex-column">
+  <div class="py-4" [innerHTML]="articleContent"></div>
+  <div class="d-flex justify-content-center py-4 gap-3">
+    <button class="btn btn-warning">{{"footer.buttons.demo" | translate}}</button>
+    <button class="btn btn-light">{{"footer.buttons.enter" | translate}}</button>
+  </div>
+  <div class="container d-flex flex-column text-center align-items-center justify-content-center">
+    <h2 class="fw-light py-2">{{"footer.buttons.enter" | translate}}</h2>
+    <form class="w-50 py-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">{{"article-details.form.name" | translate}}</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">{{"article-details.form.email" | translate}}</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">{{"article-details.form.phone" | translate}}</label>
+        <input type="tel" class="form-control" id="phone" required>
+      </div>
+      <div class="mb-3">
+        <label for="question" class="form-label">{{"article-details.form.question" | translate}}</label>
+        <textarea class="form-control" id="question" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning w-75">{{"article-details.form.btn" | translate}}</button>
+    </form>
+  </div>
+</div>

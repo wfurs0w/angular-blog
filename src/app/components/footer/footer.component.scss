@@ -1,5 +1,5 @@
 .footer-back {
-  background-color: #00437e;
+  background-color: #1c4371;
 }
 
 .footer {
@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .footer__buttons {
@@ -54,6 +54,25 @@
   }
 }
 
+.footer__options {
+  gap: 30px;
+}
+
+@media (max-width: 990px) {
+  .footer__main {
+    gap: 10px;
+  }
+
+  .footer__buttons {
+    flex-direction: column;
+  }
+
+  .footer__options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 @media (max-width: 767px) {
   .footer {
     justify-content: center;
@@ -67,6 +86,10 @@
 
   .footer__sub {
     opacity: 0;
+  }
+
+  .footer__buttons {
+    flex-direction: row;
   }
 }
 

@@ -52,8 +52,8 @@ export class ArticleDetailsComponent implements OnInit {
       } else if (block.type === 'image') {
         const imageUrl = block.data.file.url;
         const imageAlt = block.data.file.fileName;
-        const imageWidth = '300px';
-        const imageHeight = '300px';
+        const imageWidth = '100%';
+        const imageHeight = '50%';
 
         html += `<img src="${imageUrl}" alt="${imageAlt}" width="${imageWidth}" height="${imageHeight}" />`;
       }
