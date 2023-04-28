@@ -7,6 +7,7 @@ import { Article } from 'src/app/models/article-model';
 @Component({
   selector: 'app-article-details',
   templateUrl: './article-details.component.html',
+  styleUrls: ['./article-details.component.scss'],
 })
 export class ArticleDetailsComponent implements OnInit {
   articleContent: string = '';
@@ -52,7 +53,7 @@ export class ArticleDetailsComponent implements OnInit {
       } else if (block.type === 'image') {
         const imageUrl = block.data.file.url;
         const imageAlt = block.data.file.fileName;
-        const imageWidth = '100%';
+        const imageWidth = '50%';
         const imageHeight = '50%';
 
         html += `<img src="${imageUrl}" alt="${imageAlt}" width="${imageWidth}" height="${imageHeight}" />`;
