@@ -46,7 +46,7 @@
         aria-haspopup="true"
         aria-expanded="false"
       >
-        {{selectedLanguage}}
+        {{selectedLanguage.toUpperCase()}}
       </button>
       <div class="dropdown-menu" aria-labelledby="languageSelector">
         <button class="dropdown-item" (click)="switchLanguage('ua')">UA</button>

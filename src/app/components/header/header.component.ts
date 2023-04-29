@@ -18,13 +18,13 @@ export class HeaderComponent {
     if (lang) {
       this.translate.use(lang);
     }
-    this.selectedLanguage = this.translate.currentLang.toUpperCase();
+    this.selectedLanguage = this.translate.currentLang;
   }
 
   switchLanguage(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('lang', lang);
     this.articleService.setData(lang);
-    this.selectedLanguage = lang.toUpperCase();
+    this.selectedLanguage = lang;
   }
 }
