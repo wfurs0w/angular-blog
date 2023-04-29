@@ -8,7 +8,7 @@ import { ArticleService } from 'src/app/services/article.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  selectedLanguage!: string;
+  selectedLanguage: string = '';
 
   constructor(
     private translate: TranslateService,
