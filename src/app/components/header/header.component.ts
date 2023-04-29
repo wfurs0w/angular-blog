@@ -9,6 +9,7 @@ import { ArticleService } from 'src/app/services/article.service';
 })
 export class HeaderComponent {
   selectedLanguage: string = '';
+  selectedLanguageText: string = '';
 
   constructor(
     private translate: TranslateService,
@@ -19,6 +20,11 @@ export class HeaderComponent {
       this.translate.use(lang);
     }
     this.selectedLanguage = this.translate.currentLang;
+
+    const savedSelectedLanguageText = localStorage.getItem('selectedLanguageText');
+    if (savedSelectedLanguageText) {
+      this.selectedLanguageText = savedSelectedLanguageText;
+    }
   }
 
   switchLanguage(lang: string) {
@@ -26,5 +32,15 @@ export class HeaderComponent {
     localStorage.setItem('lang', lang);
     this.articleService.setData(lang);
     this.selectedLanguage = lang;
+
+    if (lang === 'ua') {
+      this.selectedLanguageText = 'UA';
+    } else if (lang === 'en') {
+      this.selectedLanguageText = 'EN';
+    } else if (lang === 'ru') {
+      this.selectedLanguageText = 'RU';
+    }
+
+    localStorage.setItem('selectedLanguageText', this.selectedLanguageText);
   }
 }
