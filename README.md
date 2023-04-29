@@ -1,7 +1,5 @@
 # Angular Blog
 
-[DEMO] ()
-
 ## About 
 
 This is a small blog that implements:
