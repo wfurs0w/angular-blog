@@ -27,6 +27,11 @@ export class ArticleComponent implements OnInit {
     this.articleService.data$.subscribe(() => {
       this.getChangeArticles();
     });
+
+    const lang = localStorage.getItem('lang');
+    if (!lang) {
+      localStorage.setItem('lang', 'en');
+    }
   }
 
   getChangeArticles() {
